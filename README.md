@@ -1,3 +1,9 @@
+# Opinion Board
+A project where you can post opinions on various topics
+
+This project is built using ReactJS and Java.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
