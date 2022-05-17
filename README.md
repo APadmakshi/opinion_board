@@ -1,7 +1,7 @@
 # Opinion Board
 A project where you can post opinions on various topics
 
-This project is built using ReactJS and Java.
+This project is built using ReactJS
 
 
 # Getting Started with Create React App
