@@ -44,7 +44,7 @@ const LoginComponent = () => {
   };
   if (authenticated) {
     console.log("navigate");
-    return <Navigate to="/signup" />;
+    return <Navigate to="/profile" />;
   }
   return (
     <div className="login">
