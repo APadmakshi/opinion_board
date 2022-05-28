@@ -3,5 +3,10 @@ import Topbar from "./Topbar";
 import Feed from "./Feed";
 
 export default function Profile() {
-  return <Topbar />;
+  return (
+    <>
+      <Topbar />
+      <Feed />
+    </>
+  );
 }

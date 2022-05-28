@@ -1,6 +1,7 @@
 import "./topbar.css";
 import { Link, Navigate, Redirect } from "react-router-dom";
 import { Search, Person, Chat, Notifications } from "@material-ui/icons";
+import Feed from "./Feed";
 
 export default function Topbar() {
   const onLogOut = () => {
