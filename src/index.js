@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<LoginComponent />} /> */}
+        <Route path="/" element={<LoginComponent />} />
         <Route index path="/signup" element={<SignUpComponent />} />
         <Route index path="/profile" element={<Profile />} />
         <Route index path="/setting" element={<SettingPage />} />

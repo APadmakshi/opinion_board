@@ -1,18 +1,20 @@
 import "./share.css";
-// import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
 import ToggleSwitch from "./toggle";
+import { Navigate, Link, Redirect, Route } from "react-router-dom";
 import React, { useState } from "react";
 
 const Share = () => {
   const [isPublic, setPublic] = useState(false);
-  const [opiniondes, setOpinion] = useState("");
+  const [opinions, setOpinion] = useState("");
   const sharePost = () => {
     const opiDes = document.getElementById("opiniondes").value;
+    setOpinion(opiDes);
     const ispublic = document.getElementById("isPublic").value;
     var today = new Date();
     const userName = localStorage.getItem("currentUser");
+    console.log("share");
 
     (async () => {
       const rawResponse = await fetch(
@@ -26,14 +28,15 @@ const Share = () => {
           body: JSON.stringify({
             username: userName.toString(),
             opinionDes: opiDes.toString(),
-            dateTine: today,
+            dateTime: today,
             isPublic: true,
           }),
         }
       );
 
-      if (rawResponse.status === 202) {
-        console.log("Post successful");
+      if (rawResponse.status === 200) {
+        window.location.reload(true);
+        return <Navigate to="/profile" />;
       } else {
         console.log("Post unsuccessful");
       }
@@ -45,6 +48,7 @@ const Share = () => {
       <div className="shareWrapper">
         <div className="shareTop">
           <input
+            name="opinions"
             type="text"
             placeholder="What's on your mind?"
             className="shareInput"
