@@ -50,13 +50,12 @@ const LoginComponent = () => {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
+          <h3 className="loginLogo">Your Opinion Matters</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
+          {/* Share and comment about opinions on topics that matter to you. */}
           </span>
         </div>
-        <div className="loginRight">
-          <div className="loginBox">
+        <div className="loginRight">          
             <input
               id="usrname"
               type="text"
@@ -78,7 +77,6 @@ const LoginComponent = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
