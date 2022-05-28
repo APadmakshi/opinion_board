@@ -14,17 +14,21 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo"> You Matter</span>
+        <h1 style={{color: "white"}} className="logo"> Your Opinion Matters</h1>
       </div>
       <div className="topbarRight">
-        <Link to="/setting">
-          <span className="leftFont">Settings</span>
-        </Link>
-        <Link to="/">
-          <span className="leftFont" onClicked={onLogOut}>
-            Logout
-          </span>
-        </Link>
+        <div>
+          <Link to="/setting">
+            <span style={{color: "white", marginLeft: "476px"}} className="leftFont">Settings</span>
+          </Link>
+        </div>
+        <div>
+          <Link to="/">
+            <span style={{color: "white"}} className="leftFont" onClicked={onLogOut}>
+              Logout
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );
