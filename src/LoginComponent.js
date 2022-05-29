@@ -52,31 +52,37 @@ const LoginComponent = () => {
         <div className="loginLeft">
           <h3 className="loginLogo">Your Opinion Matters</h3>
           <span className="loginDesc">
-          {/* Share and comment about opinions on topics that matter to you. */}
+            {/* Share and comment about opinions on topics that matter to you. */}
           </span>
         </div>
-        <div className="loginRight">          
-            <input
-              id="usrname"
-              type="text"
-              placeholder="Enter Username"
-              name="uname"
-              required
-              className="loginInput"
-            />
-            <input
-              type="password"
-              placeholder="Enter Password"
-              id="pwd"
-              required
-              className="loginInput"
-            />
-            <button className="loginButton" type="submit" onClick={onLogin}>
-              Log In
-            </button>
-          </div>
+        <div className="loginRight">
+          <input
+            id="usrname"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+            className="loginInput"
+          />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            id="pwd"
+            required
+            className="loginInput"
+          />
+          <button className="loginButton" type="submit" onClick={onLogin}>
+            Log In
+          </button>
+          <br></br>
+          {invalid ? (
+            <div className="error">
+              <h4>Incorrect User Name or Password </h4>
+            </div>
+          ) : null}
         </div>
       </div>
+    </div>
   );
 };
 

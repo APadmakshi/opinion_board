@@ -9,6 +9,10 @@
   .postWrapper {
     padding: 10px;
   }
+
+  .postText {
+    margin-left: 10px;
+  }
   
   .postTop {
     display: flex;
@@ -32,7 +36,7 @@
     font-size: 15px;
     font-weight: 500;
     margin: 0 10px;
-    color: tomato;
+    color: teal;
   }
   
   .postDate{
@@ -74,6 +78,7 @@
   
   .postCommentText{
       cursor: pointer;
+      margin-left: 10px;
       border-bottom: 1px dashed gray;
       font-size: 15px;
   }

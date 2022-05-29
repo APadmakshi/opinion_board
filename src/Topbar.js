@@ -11,16 +11,29 @@ export default function Topbar() {
     <Navigate to="/setting" />;
   };
 
+  const onFriends = () => {
+    <Navigate to="/friends" />;
+  };
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <h1 className="logo">Your Opinion Matters</h1>
+        <Link to="/profile">
+          <h1 className="logo">Your Opinion Matters</h1>
+        </Link>
       </div>
       <div className="topbarRight">
         <div>
+          <Link to="/friends">
+            <span className="leftFont" onClicked={onFriends}>
+              Friends
+            </span>
+          </Link>
+        </div>
+        <div>
           <Link to="/setting">
             <span className="leftFont" onClicked={onSetting}>
-              Settings
+              My Profile
             </span>
           </Link>
         </div>

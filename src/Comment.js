@@ -19,7 +19,6 @@ export default function Comment(post, po) {
     // Call addComments endpoint here;
     var today = new Date();
     const uname = localStorage.getItem("currentUser");
-    console.log(uname);
     fetch("http://localhost:8080/api/comments/addComments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -57,7 +56,6 @@ export default function Comment(post, po) {
         <br></br>
 
         <tr>
-          {console.log(post)}
           {post.post.userComments.map((p) => (
             <div>
               <span className="postUsername">{p.userName}</span>:

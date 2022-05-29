@@ -19,6 +19,7 @@ export default function Post({ post }) {
               <span className="postDate">{post.dateTime}</span>
             </div>
           </div>
+          <br></br>
           <span className="postText">{post?.opinionDes}</span>
         </div>
         <div className="postBottom">

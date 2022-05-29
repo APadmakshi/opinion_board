@@ -22,9 +22,9 @@
   }
   
   .loginLogo {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
-    color: #ee178d;
+    color: teal;
     margin-bottom: 10px;
   }
   
@@ -58,7 +58,7 @@
       height: 50px;
       border-radius: 10px;
       border: none;
-      background-color: #ca17ee;
+      background-color: teal;
       color: white;
       font-size: 20px;
       font-weight: 500;

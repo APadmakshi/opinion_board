@@ -8,6 +8,7 @@ import SignUpComponent from "./SignUpComponent";
 import LoginComponent from "./LoginComponent";
 import Profile from "./Profile";
 import SettingPage from "./SettingPage";
+import Friends from "./Friends";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route index path="/signup" element={<SignUpComponent />} />
         <Route index path="/profile" element={<Profile />} />
         <Route index path="/setting" element={<SettingPage />} />
+        <Route index path="/friends" element={<Friends />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -1,7 +1,7 @@
 .topbarContainer {
     height: 65px;
     width: 100%;
-    background-color: #f7f3f3;
+    background-color: teal;
     display: flex;
     align-items: center;
     position: sticky;
@@ -15,7 +15,7 @@
 
   .leftFont {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: medium;
     margin-right: auto;
     cursor: pointer;
@@ -25,7 +25,7 @@
     font-size: 24px;
     margin-left: 20px;
     font-weight: bold;
-    color: black;
+    color: white;
     cursor: pointer;
   }
   

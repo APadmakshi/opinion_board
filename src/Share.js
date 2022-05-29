@@ -1,17 +1,20 @@
 import "./share.css";
-import TimeAgo from "javascript-time-ago";
-import en from "javascript-time-ago/locale/en.json";
 import ToggleSwitch from "./toggle";
 import { Navigate, Link, Redirect, Route } from "react-router-dom";
 import React, { useState } from "react";
 
 const Share = () => {
-  const [isPublic, setPublic] = useState(false);
+  let [isPublic, setIsPublic] = useState(false);
   const [opinions, setOpinion] = useState("");
+
+  const onIsPublicChange = (checked) => {
+    setIsPublic(checked);
+  };
+
   const sharePost = () => {
     const opiDes = document.getElementById("opiniondes").value;
     setOpinion(opiDes);
-    const ispublic = document.getElementById("isPublic").value;
+
     var today = new Date();
     const userName = localStorage.getItem("currentUser");
     console.log("share");
@@ -29,7 +32,7 @@ const Share = () => {
             username: userName.toString(),
             opinionDes: opiDes.toString(),
             dateTime: today,
-            isPublic: true,
+            isPublic: isPublic,
           }),
         }
       );
@@ -59,8 +62,12 @@ const Share = () => {
         <div className="shareBottom">
           <div className="shareOptions">
             <div className="shareOption">
-              <ToggleSwitch id="isPublic" checked={isPublic} />
-              <span className="shareOptionText"> Public </span>
+              <ToggleSwitch
+                id="isPublic"
+                checked={isPublic}
+                onChange={onIsPublicChange}
+              />
+              <span className="shareOptionText"> Private Opinion </span>
             </div>
           </div>
           <button className="shareButton" type="submit" onClick={sharePost}>
